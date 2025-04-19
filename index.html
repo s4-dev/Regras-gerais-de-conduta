@@ -1,0 +1,308 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIM - Regras Gerais de Conduta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; 
+            margin: 0;
+            padding-top: 60px; 
+            background-color: #f9f9f9; 
+            color: #333; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 85%; 
+            max-width: 1000px; 
+            margin: 30px; 
+            padding: 40px; 
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
+            border-radius: 8px; 
+        }
+        h1 {
+            color: #2196f3; 
+            text-align: center;
+            margin-bottom: 15px; 
+            font-size: 2.2em; 
+            font-weight: bold;
+            text-shadow: none; 
+        }
+        h2 {
+            color: #1976d2; 
+            border-bottom: 2px solid #1976d2; 
+            padding-bottom: 8px; 
+            margin-top: 25px; 
+            margin-bottom: 15px; 
+        }
+        .rule-item {
+            margin-bottom: 25px; 
+            padding: 15px; 
+            border-left: 4px solid #2196f3; 
+            background-color: #fff; 
+            border-radius: 6px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06); 
+        }
+        .rule-item h3 {
+            color: #1976d2; 
+            font-size: 1.4em; 
+            margin-top: 0;
+            margin-bottom: 10px; 
+        }
+        .rule-item p {
+            line-height: 1.6; 
+            color: #444; 
+        }
+        .header {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin-bottom: 20px; 
+            background-color: #f8f8f8; 
+            padding: 10px 0; 
+            top: 0;
+            z-index: 100; 
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
+            border-bottom: 1px solid #eee; 
+        }
+        .logo-container {
+            max-width: 150px; 
+            height: auto;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            display: block; 
+        }
+        #language-selector {
+            margin-bottom: 20px; 
+            padding: 10px 12px; 
+            border: 1.5px solid #ccc; 
+            border-radius: 6px; 
+            font-size: 0.95em; 
+            cursor: pointer;
+            appearance: none; 
+            background-color: white;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); 
+            background-repeat: no-repeat;
+            background-position-x: 100%;
+            background-position-y: 3px;
+            padding-right: 25px; 
+        }
+
+        #language-selector:focus {
+            border-color: #2196f3; 
+            outline: none;
+            box-shadow: 0 0 0 1.5px rgba(33, 150, 243, 0.2); 
+        }
+    </style>
+    <script type="importmap">
+        {
+          "imports": {
+            "i18next": "https://cdn.jsdelivr.net/npm/i18next@23.10.0/+esm"
+          }
+        }
+    </script>
+    <script type="module">
+        import i18next from 'i18next';
+
+        const translations = {
+            pt: {
+                translation: {
+                    "pageTitle": "LIM - Regras Gerais de Conduta",
+                    "mainTitle": "Liga Internacional de MamoBall",
+                    "sectionTitle": "REGRAS GERAIS DE CONDUTA",
+                    "rule1Title": "1. RESPEITO MÚTUO",
+                    "rule1Desc1": "Trate todos os membros com respeito e cordialidade",
+                    "rule1Desc2": "Não serão toleradas ofensas pessoais, discriminação ou assédio",
+                    "rule1Desc3": "Mantenha discussões civilizadas, mesmo em casos de discordância",
+                    "rule2Title": "2. COMUNICAÇÃO ADEQUADA",
+                    "rule2Desc1": "Utilize linguagem apropriada em todos os canais",
+                    "rule2Desc2": "Evite spam, flood e mensagens repetitivas",
+                    "rule2Desc3": "Respeite o tema específico de cada canal",
+                    "rule3Title": "3. CONTEÚDO APROPRIADO",
+                    "rule3Desc1": "Não compartilhe conteúdo NSFW/Gore",
+                    "rule3Desc2": "Não divulgue informações pessoais de outros membros",
+                    "rule3Desc3": "Evite tópicos polêmicos não relacionados ao MamoBall",
+                    "rule4Title": "4. INTEGRIDADE",
+                    "rule4Desc1": "Não utilize contas falsas (\"fakes\")",
+                    "rule4Desc2": "Não tente burlar punições ou restrições",
+                    "rule4Desc3": "Reporte violações às regras pelos canais apropriados"
+                }
+            },
+            en: {
+                translation: {
+                    "pageTitle": "LIM - General Rules of Conduct",
+                    "mainTitle": "International MamoBall League",
+                    "sectionTitle": "GENERAL RULES OF CONDUCT",
+                    "rule1Title": "1. MUTUAL RESPECT",
+                    "rule1Desc1": "Treat all members with respect and cordiality",
+                    "rule1Desc2": "Personal insults, discrimination or harassment will not be tolerated",
+                    "rule1Desc3": "Maintain civilized discussions, even in cases of disagreement",
+                    "rule2Title": "2. APPROPRIATE COMMUNICATION",
+                    "rule2Desc1": "Use appropriate language in all channels",
+                    "rule2Desc2": "Avoid spam, flooding and repetitive messages",
+                    "rule2Desc3": "Respect the specific topic of each channel",
+                    "rule3Title": "3. APPROPRIATE CONTENT",
+                    "rule3Desc1": "Do not share NSFW/Gore content",
+                    "rule3Desc2": "Do not disclose personal information of other members",
+                    "rule3Desc3": "Avoid controversial topics not related to MamoBall",
+                    "rule4Title": "4. INTEGRITY",
+                    "rule4Desc1": "Do not use fake accounts (\"fakes\")",
+                    "rule4Desc2": "Do not try to circumvent punishments or restrictions",
+                    "rule4Desc3": "Report rule violations through the appropriate channels"
+                }
+            },
+            es: {
+                translation: {
+                    "pageTitle": "LIM - Reglas Generales de Conducta",
+                    "mainTitle": "Liga Internacional de MamoBall",
+                    "sectionTitle": "REGLAS GENERALES DE CONDUCTA",
+                    "rule1Title": "1. RESPETO MUTUO",
+                    "rule1Desc1": "Trata a todos los miembros con respeto y cordialidad",
+                    "rule1Desc2": "No se tolerarán insultos personales, discriminación o acoso",
+                    "rule1Desc3": "Mantén discusiones civilizadas, incluso en casos de desacuerdo",
+                    "rule2Title": "2. COMUNICACIÓN ADECUADA",
+                    "rule2Desc1": "Utiliza un lenguaje apropiado en todos los canales",
+                    "rule2Desc2": "Evita el spam, el flooding y los mensajes repetitivos",
+                    "rule2Desc3": "Respeta el tema específico de cada canal",
+                    "rule3Title": "3. CONTENIDO APROPIADO",
+                    "rule3Desc1": "No compartas contenido NSFW/Gore",
+                    "rule3Desc2": "No divulgues información personal de otros miembros",
+                    "rule3Desc3": "Evita temas polémicos no relacionados con MamoBall",
+                    "rule4Title": "4. INTEGRIDAD",
+                    "rule4Desc1": "No utilices cuentas falsas (\"fakes\")",
+                    "rule4Desc2": "No intentes eludir castigos o restricciones",
+                    "rule4Desc3": "Reporta las violaciones de las reglas a través de los canales apropiados"
+                }
+            },
+            fr: {
+                translation: {
+                    "pageTitle": "LIM - Règles Générales de Conduite",
+                    "mainTitle": "Ligue Internationale de MamoBall",
+                    "sectionTitle": "RÈGLES GÉNÉRALES DE CONDUITE",
+                    "rule1Title": "1. RESPECT MUTUEL",
+                    "rule1Desc1": "Traitez tous les membres avec respect et cordialité",
+                    "rule1Desc2": "Les insultes personnelles, la discrimination ou le harcèlement ne seront pas tolérés",
+                    "rule1Desc3": "Maintenez des discussions civilisées, même en cas de désaccord",
+                    "rule2Title": "2. COMMUNICATION APPROPRIÉE",
+                    "rule2Desc1": "Utilisez un langage approprié dans tous les canaux",
+                    "rule2Desc2": "Évitez le spam, le flooding et les messages répétitifs",
+                    "rule2Desc3": "Respectez le thème spécifique de chaque canal",
+                    "rule3Title": "3. CONTENU APPROPRIÉ",
+                    "rule3Desc1": "Ne partagez pas de contenu NSFW/Gore",
+                    "rule3Desc2": "Ne divulguez pas d'informations personnelles sur d'autres membres",
+                    "rule3Desc3": "Évitez les sujets controversés non liés au MamoBall",
+                    "rule4Title": "4. INTÉGRITÉ",
+                    "rule4Desc1": "N'utilisez pas de faux comptes (\"fakes\")",
+                    "rule4Desc2": "N'essayez pas de contourner les sanctions ou les restrictions",
+                    "rule4Desc3": "Signalez les violations des règles par les canaux appropriés"
+                }
+            }
+        };
+
+        i18next
+            .init({
+                resources: translations,
+                lng: 'pt', // default language
+                fallbackLng: 'pt',
+                debug: false
+            }, (err, t) => {
+                if (err) return console.log('something went wrong loading', err);
+                updateContent();
+            });
+
+        function changeLanguage(lng) {
+            i18next.changeLanguage(lng, () => {
+                updateContent();
+            });
+        }
+
+        function updateContent() {
+            document.title = i18next.t('pageTitle');
+            document.querySelector('#main-title').textContent = i18next.t('mainTitle');
+            document.querySelector('#section-title').textContent = i18next.t('sectionTitle');
+            document.querySelector('#rule1-title').textContent = i18next.t('rule1Title');
+            document.querySelector('#rule1-desc1').textContent = i18next.t('rule1Desc1');
+            document.querySelector('#rule1-desc2').textContent = i18next.t('rule1Desc2');
+            document.querySelector('#rule1-desc3').textContent = i18next.t('rule1Desc3');
+            document.querySelector('#rule2-title').textContent = i18next.t('rule2Title');
+            document.querySelector('#rule2-desc1').textContent = i18next.t('rule2Desc1');
+            document.querySelector('#rule2-desc2').textContent = i18next.t('rule2Desc2');
+            document.querySelector('#rule2-desc3').textContent = i18next.t('rule2Desc3');
+            document.querySelector('#rule3-title').textContent = i18next.t('rule3Title');
+            document.querySelector('#rule3-desc1').textContent = i18next.t('rule3Desc1');
+            document.querySelector('#rule3-desc2').textContent = i18next.t('rule3Desc2');
+            document.querySelector('#rule3-desc3').textContent = i18next.t('rule3Desc3');
+            document.querySelector('#rule4-title').textContent = i18next.t('rule4Title');
+            document.querySelector('#rule4-desc1').textContent = i18next.t('rule4Desc1');
+            document.querySelector('#rule4-desc2').textContent = i18next.t('rule4Desc2');
+            document.querySelector('#rule4-desc3').textContent = i18next.t('rule4Desc3');
+
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSelector = document.getElementById('language-selector');
+            languageSelector.addEventListener('change', (event) => {
+                changeLanguage(event.target.value);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="/lim.png" alt="LIM Logo">
+            </div>
+        </div>
+
+        <h1 id="main-title">Liga Internacional de MamoBall</h1>
+        <hr style="border:none; border-top:2px solid #ddd; margin: 20px 0;">
+        <h2 id="section-title">REGRAS GERAIS DE CONDUTA</h2>
+
+        <select id="language-selector">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+
+        <div class="rule-item">
+            <h3 id="rule1-title">1. RESPEITO MÚTUO</h3>
+            <p id="rule1-desc1">Trate todos os membros com respeito e cordialidade</p>
+            <p id="rule1-desc2">Não serão toleradas ofensas pessoais, discriminação ou assédio</p>
+            <p id="rule1-desc3">Mantenha discussões civilizadas, mesmo em casos de discordância</p>
+        </div>
+
+        <div class="rule-item">
+            <h3 id="rule2-title">2. COMUNICAÇÃO ADEQUADA</h3>
+            <p id="rule2-desc1">Utilize linguagem apropriada em todos os canais</p>
+            <p id="rule2-desc2">Evite spam, flood e mensagens repetitivas</p>
+            <p id="rule2-desc3">Respeite o tema específico de cada canal</p>
+        </div>
+
+        <div class="rule-item">
+            <h3 id="rule3-title">3. CONTEÚDO APROPRIADO</h3>
+            <p id="rule3-desc1">Não compartilhe conteúdo NSFW/Gore</p>
+            <p id="rule3-desc2">Não divulgue informações pessoais de outros membros</p>
+            <p id="rule3-desc3">Evite tópicos polêmicos não relacionados ao MamoBall</p>
+        </div>
+
+        <div class="rule-item">
+            <h3 id="rule4-title">4. INTEGRIDADE</h3>
+            <p id="rule4-desc1">Não utilize contas falsas ("fakes")</p>
+            <p id="rule4-desc2">Não tente burlar punições ou restrições</p>
+            <p id="rule4-desc3">Reporte violações às regras pelos canais apropriados</p>
+        </div>
+    </div>
+</body>
+</html>
